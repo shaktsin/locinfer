@@ -1,16 +1,20 @@
 #pragma once
 
 
-struct ModelConfig {
+struct QwenConfig {
 
-    int hidden_size{};
-    int intermediate_size{};
-    int num_hidden_layers{};
-    int num_attention_heads{};
-    int num_key_value_heads{};
-    int vocab_size{};
-    int max_position_embeddings{};
+    std::string architecture;
+    int vocab_size = 0;
+    int hidden_size = 0;
+    int num_layers = 0;
 };
 
-ModelConfig load_model_config(const char* model_file_path);
+struct TensorInfo {
+    std::string dtype;
+    std::vector<int64_t> shape;
+    size_t data_begin = 0;
+    size_t data_end = 0;
+};
+
+QwenConfig load_qwen_config(const char* model_file_path);
 
