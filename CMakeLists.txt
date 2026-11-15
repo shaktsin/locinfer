@@ -5,6 +5,7 @@ project(locinf LANGUAGES CXX)
 add_executable(locinf 
     src/main.cpp
     src/model_loader.cpp
+    src/safetensors.cpp
 )
 
 find_package(nlohmann_json CONFIG REQUIRED)
