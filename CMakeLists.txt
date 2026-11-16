@@ -6,8 +6,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_executable(locinf 
     src/main.cpp
-    src/model_loader.cpp
-    src/safetensors.cpp
     src/safetensor_checkpoint.cpp
 )
 
